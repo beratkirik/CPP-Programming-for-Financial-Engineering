@@ -1,0 +1,96 @@
+/* Cost of carry factor b must be included in formulae depending on the
+ derivative type. These are used in the generalized Black-Scholes formulae.
+ If r is the risk-free interest and q is the continuous dividend yield then
+ the cost-of-carry b per derivative type is:
+ 
+ a) b = r: Black-Scholes (1973) stock option model
+ b) b = r - q: Merton (1973) stock optioin model with continuous dividend yield
+ c) b = 0; Black (1976) futures option model
+ d) b = r - rf: Garman and Kohlhagen (1983) currency option model, where rf is the
+ 'foreign' interest rate
+ */
+
+
+/*
+ 
+ main:
+ 
+ You can also overload with vectors, for a range: i.e. Call(vector<double> _Strikes)
+ 
+ 
+ 
+ struct:
+ 
+ There is benefit to keeping the struct definition and then encapsulating it into the classes. More flexible
+ 
+ I like the external struct, then use that data type as a member of the Options class. That way it is reusable by others.
+ 
+ The struct with the option data will be used as a helping struct which job is to keep the option data together. You need an option pricing class, with private members and public functions, that that take certain input and return certain results. The member functions will be the pricing methods and other functions that are asked.
+ 
+ When the exercise asks for global functions, you implement these outside of the class, independently.
+ 
+ When it comes to test all of the above, then you go to main() and you write code to do it, print the results, implement loops, if necessary etc.
+ 
+ 
+ 
+ 
+ EuropeanOption:
+ 
+ have the 5 parameters as private class members (possibly as a member struct), and then have Call/Put functions, each holding none or one constant: Call(), Call(double _Spot), Call(double _Strike), which will 'override' the corresponding private member and call the corresponding global function.
+ 
+ */
+
+
+/*
+ Put-Call Parity
+ 
+ So Put Call Parity function will take C, P, K, S, r, t and if it is satisfied there is no arbitrage opportunity. One way to see if it is satisfied is to put all the variables in one side and say if all that equals to zero then Put Call Parity is satisfied, hence no arbitrage - no risk free money. If it's not equal to zero, then it is not satisfied, hence there is arbitrage somewhere. Although, due to computing errors, you could say if put call parity (the variables you brought in one side) are > 0.000001 then there is arbitrage or the opposite. Cause if Put Call Parity = 0.0002451 for example there is a tiny arbitrage opportunity.
+ 
+ As for how to implement it, I would suggest to pass all the necessary parameters and compute the option prices and use them directly inside the formula with the rest variables:
+ CallPrice(t,K,S,r,sigma,T,q) -PutPrice(t,K,S,r,sigma,T,q) - S + K*exp(-rt) > 0.00001 // arbitrage
+ Otherwise, you can pass Call, Put, K, S, r, t as arguments in the funtion (similar way) and basically do the same.
+ That is, Put Call parity is of type bool and all it does is the above comparison. You can have a message print to inform the user what is going on, if there is arbitrage or not.
+*/
+
+
+
+/* e) a better implementation would be to have a separate overloaded function for each type
+
+ One way to achieve that would be to create types for each using typedef and overload for each one. So you would have vector<Spots>, ... 
+ */
+
+
+
+
+
+/* Mesh
+ I created a mesh function of type vector<double> and will take in some parameters like start, end and interval. What will do is to push back elements of Put, Call, gamma etc while iterating for each interval value the Put, Call, gamma etc functions. It's size apparently will be the difference of start and end, or, you know, keep pushing back until < end. You might need two loops somewhere in A2 c.
+Yeah basically you use the mesh function to iterate your functions (gamma, put, call, delta...) and print the values of each iteration right away. To do that you will need 2 of them, one for the S change and one for the h change. Hence you will need two loops.
+
+Think of mesh as a vector here with h*S dimensions more or less. I am not sure if I put it right though, mathematically speaking. 
+ 
+That said, keep everything constant except the parameter of interest that gets updated by mesh (h step).
+ 
+In my opinion, you should create the mesh as an overloaded pricer member function of the Options class, or a generic global mesh function that takes any options class as a param
+ */
+
+
+
+
+
+/*
+ 
+ Global functions:
+ 
+ Overloaded pricing functions, greeks, mesher (returning a vector or matrix of prices for a given input set)
+ 
+ The call/put functions as global. You can maintain those global functions (organize them into external global file), and then call those from the class functions. Or you can just customize them yourself straight into the class
+ 
+ Just for my understanding, we create the global functions in order for the user to directly compute a call or put price without having to use any OOP. The class will then contain it's own member functions (Price, Put/Call, etc...).
+ 
+ Personally I found it useful to create global pricing functions and call these functions from within my classes, but you're free to define the pricing functions in whichever way you think is best
+
+
+ */
+
+

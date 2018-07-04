@@ -1,0 +1,31 @@
+﻿  TestEuropeanOption.cpp
+c:\users\administrator\desktop\windows\group e\group e\group a\europeanoption.hpp(91): warning C4018: '<': signed/unsigned mismatch
+  c:\users\administrator\desktop\windows\group e\group e\group a\testeuropeanoption.cpp(38): note: see reference to function template instantiation 'std::vector<double,std::allocator<_Ty>> EuropeanOption::CallPriceEuro<type_S>(const std::vector<type_S,std::allocator<type_S>> &)' being compiled
+          with
+          [
+              _Ty=double
+          ]
+c:\users\administrator\desktop\windows\group e\group e\group a\europeanoption.hpp(104): warning C4018: '<': signed/unsigned mismatch
+  c:\users\administrator\desktop\windows\group e\group e\group a\testeuropeanoption.cpp(39): note: see reference to function template instantiation 'std::vector<double,std::allocator<_Ty>> EuropeanOption::PutPriceEuro<type_S>(const std::vector<type_S,std::allocator<type_S>> &)' being compiled
+          with
+          [
+              _Ty=double
+          ]
+  OptionPricing.cpp
+  EuropeanOption.cpp
+c:\users\administrator\desktop\windows\group e\group e\group a\europeanoption.cpp(161): warning C4018: '<': signed/unsigned mismatch
+c:\users\administrator\desktop\windows\group e\group e\group a\europeanoption.cpp(174): warning C4018: '<': signed/unsigned mismatch
+c:\users\administrator\desktop\windows\group e\group e\group a\europeanoption.cpp(188): warning C4018: '<': signed/unsigned mismatch
+c:\users\administrator\desktop\windows\group e\group e\group a\europeanoption.cpp(201): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  DatasimException.cpp
+c:\users\administrator\desktop\windows\group e\group e\utilitiesdjd\exceptionclasses\datasimexception.cpp(66): warning C4018: '<': signed/unsigned mismatch
+  ExcelMechanisms.cpp
+c:\users\administrator\desktop\windows\group e\group e\utilitiesdjd\exceldriver\excelimports.cpp(51): warning C4192: automatically excluding 'IFont' while importing type library 'C:\Program Files (X86)\Microsoft Office\Office14\EXCEL.EXE'
+c:\users\administrator\desktop\windows\group e\group e\utilitiesdjd\exceldriver\excelimports.cpp(51): warning C4192: automatically excluding 'IPicture' while importing type library 'C:\Program Files (X86)\Microsoft Office\Office14\EXCEL.EXE'
+  ExcelDriver.cpp
+  StringConversions.cpp
+  Generating Code...
+  LINK : C:\Users\Administrator\Desktop\Windows\Group E\Debug\Group E.exe not found or not built by the last incremental link; performing full link
+  Group E.vcxproj -> C:\Users\Administrator\Desktop\Windows\Group E\Debug\Group E.exe
+  Group E.vcxproj -> C:\Users\Administrator\Desktop\Windows\Group E\Debug\Group E.pdb (Full PDB)

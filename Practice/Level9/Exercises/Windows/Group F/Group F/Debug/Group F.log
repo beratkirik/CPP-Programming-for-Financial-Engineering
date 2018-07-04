@@ -1,0 +1,17 @@
+﻿  TestBSPDE1.cpp
+c:\users\administrator\desktop\windows\group f\group f\mesher.hpp(62): warning C4018: '<': signed/unsigned mismatch
+c:\users\administrator\desktop\windows\group f\group f\testbspde1.cpp(92): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\administrator\desktop\windows\group f\group f\group a\europeanoption.hpp(91): warning C4018: '<': signed/unsigned mismatch
+  c:\users\administrator\desktop\windows\group f\group f\testbspde1.cpp(114): note: see reference to function template instantiation 'std::vector<double,std::allocator<_Ty>> EuropeanOption::CallPriceEuro<type_S>(const std::vector<type_S,std::allocator<type_S>> &)' being compiled
+          with
+          [
+              _Ty=double
+          ]
+c:\users\administrator\desktop\windows\group f\group f\group a\europeanoption.hpp(104): warning C4018: '<': signed/unsigned mismatch
+  c:\users\administrator\desktop\windows\group f\group f\testbspde1.cpp(115): note: see reference to function template instantiation 'std::vector<double,std::allocator<_Ty>> EuropeanOption::PutPriceEuro<type_S>(const std::vector<type_S,std::allocator<type_S>> &)' being compiled
+          with
+          [
+              _Ty=double
+          ]
+  Group F.vcxproj -> C:\Users\Administrator\Desktop\Windows\Group F\Debug\Group F.exe
+  Group F.vcxproj -> C:\Users\Administrator\Desktop\Windows\Group F\Debug\Group F.pdb (Full PDB)

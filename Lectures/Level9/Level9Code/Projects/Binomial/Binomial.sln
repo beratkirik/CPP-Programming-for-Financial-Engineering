@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Binomial", "Binomial\Binomial.vcxproj", "{6C752AF6-1CC0-459B-91A7-CCB9FCB6F143}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6C752AF6-1CC0-459B-91A7-CCB9FCB6F143}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6C752AF6-1CC0-459B-91A7-CCB9FCB6F143}.Debug|Win32.Build.0 = Debug|Win32
+		{6C752AF6-1CC0-459B-91A7-CCB9FCB6F143}.Release|Win32.ActiveCfg = Release|Win32
+		{6C752AF6-1CC0-459B-91A7-CCB9FCB6F143}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
